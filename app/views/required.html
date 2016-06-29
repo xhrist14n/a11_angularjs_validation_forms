@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <form name="formulario">
+    <p>
+      Informacion:
+    </p>
+    <input name="nombre" ng-model="nombre" required>
+  </form>
+  <p>
+    El valor del estado de la entrada es:
+  </p>
+  <p>
+    <strong>
+      {{formulario.nombre.$valid}}
+    </strong>
+  </p>
+</div>

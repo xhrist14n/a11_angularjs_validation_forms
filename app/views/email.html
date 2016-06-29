@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <form name="formulario">
+    <p>
+      Email: 
+    </p>
+    <input name="email" ng-model="email" type="email">
+  </form>
+  <p>
+    El estado valido de la entrada es:
+  </p>
+  <p>
+    <strong>
+      {{formulario.email.$valid}}
+    </strong>
+  </p>
+</div>

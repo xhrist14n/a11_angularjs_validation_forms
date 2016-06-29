@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <p>
+    <strong>
+      Formulario
+    </strong>
+  </p>
+  <form name="formulario" id="formulario">
+    <p>
+      Nombre:
+    </p>
+    <input name="nombre" ng-model="nombre" required>
+    <span ng-show="formulario.nombre.$touched && formulario.nombre.$invalid">
+      El nombre es requerido.
+    </span>
+  </form>
+</div>

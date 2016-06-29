@@ -1,0 +1,33 @@
+<div class="jumbotron">
+  <p>
+    <strong>
+        Validacion
+    </strong>
+  </p>
+  <form  ng-controller="ValidationCtrl" name="formulario" novalidate>
+    <p>
+      Usuario:
+    </p>
+    <p>
+      <input type="text" name="user" ng-model="user" required>
+      <span style="color:red" ng-show="formulario.user.$dirty && formulario.user.$invalid">
+        <span ng-show="formulario.user.$error.required">El usuario es requerido.</span>
+      </span>
+    </p>
+    <p>
+      Email:
+    </p>
+    <p>
+      <input type="email" name="email" ng-model="email" required>
+      <span style="color:red" ng-show="formulario.email.$dirty && formulario.email.$invalid">
+        <span ng-show="formulario.email.$error.required">Email es requerido.</span>
+        <span ng-show="formulario.email.$error.email">Formato de Email no valido.</span>
+      </span>
+    </p>
+    <p>
+      <input
+        type="submit"
+        ng-disabled="formulario.user.$dirty && formulario.user.$invalid || formulario.email.$dirty && formulario.email.$invalid">
+    </p>
+  </form>
+</div>
